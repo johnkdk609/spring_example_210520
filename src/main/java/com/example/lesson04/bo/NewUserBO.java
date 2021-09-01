@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.lesson04.dao.NewUserDAO;
+import com.example.lesson04.model.NewUser;
 
 @Service
 public class NewUserBO {
@@ -13,5 +14,11 @@ public class NewUserBO {
 	
 	public int addNewUserAsField(String name, String yyyymmdd, String email, String introduce) {
 		return newUserDAO.insertNewUserAsField(name, yyyymmdd, email, introduce);
+	// public void addNewUserAsField(String name, String yyyymmdd, String email, String introduce) {
+	//	newUserDAO.insertNewUserAsField(name, yyyymmdd, email, introduce);
+	}
+	
+	public NewUser getLastNewUser() {
+		return newUserDAO.selectLastNewUser();
 	}
 }
