@@ -3,7 +3,7 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.lesson04.dao.NewUserDAO">
-	<insert id="insertNewUserAsFields" parameterType="map">
+	<insert id="insertNewUserAsField" parameterType="map">
 		INSERT INTO `new_user`
 		(
 			`name`
